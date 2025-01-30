@@ -1,11 +1,11 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap() : ClapTrap()
 {
 	std::cout << "ScavTrap default constructor" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string Name)
+ScavTrap::ScavTrap(std::string Name) : ClapTrap(Name)
 {
 	name = Name;
 	hitPoints = 10;
@@ -15,7 +15,7 @@ ScavTrap::ScavTrap(std::string Name)
 }
 
 
-ScavTrap::ScavTrap(const ScavTrap& other)
+ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other) 
 {
 	name = other.name;
 	hitPoints = other.hitPoints;

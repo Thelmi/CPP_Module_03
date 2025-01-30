@@ -1,11 +1,11 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap()
+FragTrap::FragTrap() : ClapTrap()
 {
 	std::cout << "FragTrap default constructor" << std::endl;
 }
 
-FragTrap::FragTrap(std::string Name)
+FragTrap::FragTrap(std::string Name) : ClapTrap(Name)
 {
 	name = Name;
 	hitPoints = 100;
@@ -14,7 +14,7 @@ FragTrap::FragTrap(std::string Name)
 	std::cout << Name << "FragTrap has been constructed" << std::endl; 
 }
 
-FragTrap::FragTrap(const FragTrap& other)
+FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other)
 {
 	name = other.name;
 	hitPoints = other.hitPoints;
